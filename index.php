@@ -2,7 +2,7 @@
 
 <head>
 	<link rel="stylesheet" href="assets/style.css">
-	<link rel="stylesheet" href="assets/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 	<script src="assets/script.js"></script>
 </head>
 
