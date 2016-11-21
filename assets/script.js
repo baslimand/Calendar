@@ -3,7 +3,7 @@ function load_calendar_contents(month, year){
 	var xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.abort();
-	xmlhttp.open("POST", "../assets/calendar_content.php", true);
+	xmlhttp.open("POST", "calendar_content.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange=function() {
