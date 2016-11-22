@@ -2,13 +2,9 @@
 
 require("Calendar.php");
 
-$db = mysql_connect("127.0.0.1", "root", "wysiwyg") or die ("ss");
-mysql_select_db("test", $db);
+$db = new PDO("mysql:dbname=test;host=127.0.0.1", "root", "wysiwyg");
 
-$myquery = mysql_query("SELECT * FROM test1 ORDER BY date_start");
-while($myrow = mysql_fetch_assoc($myquery)){
-	$events[] = $myrow;
-}
+$events = $db->query("SELECT * FROM test1 ORDER BY `date_start`", PDO::FETCH_ASSOC);
 
 $cal = new Calendar($_POST["month"], $_POST["year"]);
 
